@@ -44,11 +44,6 @@ function App() {
     checkLoggedIn();
 }, [])
 
-const handleLogout = () => {
-  localStorage.removeItem("token");
-  setLoggedIn(false);
-}
-
 
   useEffect(() => {
     const checkLoggedIn = () => {
@@ -68,6 +63,8 @@ const handleLogout = () => {
     };
     checkLoggedIn();
   }, []);
+
+  
   const handleLogout=()=>{
     localStorage.removeItem("token")
     setLoggedIn(false)

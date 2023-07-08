@@ -7,6 +7,9 @@ import Home from '../Home/Home'
 
 export default function SignIn({userId, setUserId, loggedIn, setLoggedIn, loginError, setLoginError, setFirstName}) {
 
+    const [email, setEmail] = useState("")
+    const [password, setPassword] = useState("")
+    
     const handleLogin = async (email, password) => {
    
     
@@ -38,7 +41,7 @@ export default function SignIn({userId, setUserId, loggedIn, setLoggedIn, loginE
         console.log("Response output: ", response)
         
       
-    };
+    
 
     if (response.status === 200) {
       // const { token } = response.data;
@@ -171,5 +174,6 @@ export default function SignIn({userId, setUserId, loggedIn, setLoggedIn, loginE
         </a>
       </div>
     </div>
-  );
+  )
 }
+
